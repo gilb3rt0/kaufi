@@ -2,13 +2,14 @@
 	import { ProductCard } from '$lib';
 	import type { PageProps } from './$types';
 	import type { Product } from '@medusajs/client-types';
+	import {error} from "@sveltejs/kit"
+
 	const { data }: PageProps = $props();
-	const products = data?.products;
+	const {products} = data;
+	if (!products) error(404)
+	
 </script>
 
-{#if !products?.length}
-	<span>no products found</span>
-{:else}
 	<ul class="grid gap-6 p-4 md:grid-cols-2">
 		{#each products as product}
 			<li>
@@ -16,4 +17,3 @@
 			</li>
 		{/each}
 	</ul>
-{/if}
