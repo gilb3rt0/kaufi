@@ -1,1 +1,33 @@
 @import 'tailwindcss';
+
+@font-face {
+	font-family: 'Resistance Regular';
+	src:
+		url('/fonts/resistance_generale-webfont.woff2') format('woff2'),
+		url('/fonts/resistance_generale-webfont.woff') format('woff'),
+		url('/fonts/resistance_generale-webfont.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Cirrus Cumulus';
+	src:
+		url('/fonts/CirrusCumulus.woff') format('woff'),
+		url('/fonts/CirrusCumulus.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Sligoil-Micro';
+	src:
+		url('/fonts/Sligoil-Micro.woff') format('woff'),
+		url('/fonts/Sligoil-Micro.woff2') format('woff2');
+}
+
+@theme {
+	--font-resistance: 'Resistance Regular', sans-serif;
+	--font-cirrus: 'Cirrus Cumulus', var(--font-sans);
+	--font-sigloil: 'Sligoil-Micro', var(--font-sans);
+}
+
+body,
+html {
+	overscroll-behavior: none;
+}
