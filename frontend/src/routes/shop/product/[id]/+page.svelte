@@ -11,8 +11,6 @@
 
 </script>
 
-
-
 <h2 class="font-cirrus-cumulus font-bold text-7xl">
     {title}
 </h2>
